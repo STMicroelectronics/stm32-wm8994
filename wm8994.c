@@ -1197,13 +1197,13 @@ int32_t WM8994_SetFrequency(WM8994_Object_t *pObj, uint32_t AudioFreq)
   switch (AudioFreq)
   {
   case  WM8994_FREQUENCY_8K:
-    /* AIF1 Sample Rate = 8 (KHz), ratio=256 */
+    /* AIF1 Sample Rate = 8 (KHz), ratio=512 */
     tmp = 0x0005;
     ret = wm8994_write_reg(&pObj->Ctx, WM8994_AIF1_RATE, &tmp, 2);
     break;
     
   case  WM8994_FREQUENCY_16K:
-    /* AIF1 Sample Rate = 16 (KHz), ratio=256 */ 
+    /* AIF1 Sample Rate = 16 (KHz), ratio=512 */ 
     tmp = 0x0035;
     ret = wm8994_write_reg(&pObj->Ctx, WM8994_AIF1_RATE, &tmp, 2);
     break;
@@ -1221,13 +1221,13 @@ int32_t WM8994_SetFrequency(WM8994_Object_t *pObj, uint32_t AudioFreq)
     break;
     
   case  WM8994_FREQUENCY_11K:
-    /* AIF1 Sample Rate = 11.025 (KHz), ratio=256 */ 
+    /* AIF1 Sample Rate = 11.025 (KHz), ratio=512 */ 
     tmp = 0x0015;
     ret = wm8994_write_reg(&pObj->Ctx, WM8994_AIF1_RATE, &tmp, 2);
     break;
     
   case  WM8994_FREQUENCY_22K:
-    /* AIF1 Sample Rate = 22.050 (KHz), ratio=256 */ 
+    /* AIF1 Sample Rate = 22.050 (KHz), ratio=512 */ 
     tmp = 0x0045;
     ret = wm8994_write_reg(&pObj->Ctx, WM8994_AIF1_RATE, &tmp, 2);
     break;
